@@ -25,6 +25,9 @@ fichero : src/create.ts
 
 6º Subimos a GitHub lo que tenemos:
 renegade@MiPC:~/proyectos/RxJs$ git init
+
+Ojo, hay que crear el .gitignore para añadir el directorio: /node_modules
+
 renegade@MiPC:~/proyectos/RxJs$ git remote add rxjs https://github.com/RenegadeAsturias/RxJs.git
 
 
