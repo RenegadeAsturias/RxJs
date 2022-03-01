@@ -31,6 +31,42 @@ Ojo, hay que crear el .gitignore para añadir el directorio: /node_modules
 renegade@MiPC:~/proyectos/RxJs$ git remote add rxjs https://github.com/RenegadeAsturias/RxJs.git
 
 
+7º Completamos el fichero: create.ts
+
+import { Observable } from 'rxjs';
+const obs = Observable.create(function(observer){
+    observer.next('Hola');
+    observer.next('Coders');
+    observer.complete();
+});
+obs.subscribe(x => console.log(x));
+
+
+Y transpilamos el código para obtener: create.js
+renegade@MiPC:~/proyectos/RxJs$ ./node_modules/typescript/bin/tsc ./src/1_creation/create.ts 
+
+Y ahora lo ejecutamos:
+renegade@MiPC:~/proyectos/RxJs$ node ./src/1_creation/create.js
+Hola
+Coders
+
+
+
+8º Probamos el operador de creación: 'from' en el fichero: ./src/1_creation/from.tsc
+
+renegade@MiPC:~/proyectos/RxJs$ ./node_modules/typescript/bin/tsc ./src/1_creation/from.ts 
+
+renegade@MiPC:~/proyectos/RxJs$ node ./src/1_creation/from.js
+Product { idProduct: 1, name: 'TV', price: 1000 }
+Product { idProduct: 2, name: 'PC', price: 3000 }
+
+
+
+
+
+
+
+
 
 
 
